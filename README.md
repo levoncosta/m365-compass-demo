@@ -11,8 +11,9 @@ The demonstration uses fictional organization data and sample outputs. It does
 not connect to a live Microsoft 365 tenant, process payments, or store client
 information.
 
-## Live demo
+## GitHub Pages
 
-This repository is configured for GitHub Pages. The public site is available at:
+This folder is ready to publish from the root of a GitHub repository. In the
+repository settings, open **Pages**, choose **Deploy from a branch**, select
+the **main** branch and **/(root)** folder, then save.
 
-https://levoncosta.github.io/m365-compass-demo/

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive portfolio demonstration of M365 Compass, an explainable Microsoft 365 consulting decision-support application.">
+  <title>M365 Compass — Interactive product demonstration</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="M365 Compass home">
+      <span class="brand-mark" aria-hidden="true">◇</span>
+      <span>M365 <strong>Compass</strong></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#journey">Guided demo</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#evidence">Evidence</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio case study · Interactive demonstration</p>
+        <h1>From client uncertainty to a defensible Microsoft 365 plan.</h1>
+        <p class="lede">M365 Compass structures discovery, checks evidence and licensing assumptions, explains its recommendation, and generates client-ready deliverables.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#journey">Start the guided demo</a>
+          <a class="button secondary" href="assets/m365-compass-sample-brief.pdf" target="_blank" rel="noopener">View sample PDF</a>
+        </div>
+        <p class="disclosure"><strong>Demo boundary:</strong> this public experience uses fictional sample data. It does not connect to a Microsoft tenant, authenticate users, or process payments.</p>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/compass-showcase.jpg" alt="M365 Compass screens showing assessment, validation, recommendation, and deliverable generation">
+      </figure>
+    </section>
+
+    <section class="summary-strip" aria-label="Product summary">
+      <div><strong>Deterministic</strong><span>No AI-generated recommendations</span></div>
+      <div><strong>Evidence-aware</strong><span>Unknowns remain visible</span></div>
+      <div><strong>Explainable</strong><span>Rules and trade-offs are disclosed</span></div>
+      <div><strong>Deliverable-ready</strong><span>PDF, Excel, JSON and Markdown</span></div>
+    </section>
+
+    <section class="journey section-shell" id="journey">
+      <div class="section-heading">
+        <p class="eyebrow">The recommended user journey</p>
+        <h2>Four phases. One clear next action.</h2>
+        <p>The full application contains advanced consulting tools. This demonstration presents its primary path first and reveals supporting detail only when it helps the decision.</p>
+      </div>
+
+      <div class="demo-shell">
+        <ol class="stepper" aria-label="Demo progress">
+          <li><button class="step active" data-step="0"><span>1</span><strong>Assess</strong><small>Goals and scope</small></button></li>
+          <li><button class="step" data-step="1"><span>2</span><strong>Validate</strong><small>Evidence and costs</small></button></li>
+          <li><button class="step" data-step="2"><span>3</span><strong>Recommend</strong><small>Plan and trade-offs</small></button></li>
+          <li><button class="step" data-step="3"><span>4</span><strong>Deliver</strong><small>Client-ready output</small></button></li>
+        </ol>
+
+        <div class="demo-status">
+          <span id="progress-label">Step 1 of 4</span>
+          <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+          <span id="completion-label">25% complete</span>
+        </div>
+
+        <article class="demo-panel active" data-panel="0">
+          <div class="panel-copy">
+            <p class="phase-label">Assess</p>
+            <h3>What does the client need?</h3>
+            <p>Establish the opportunity, users, outcomes, constraints, and workstreams before presenting a solution.</p>
+            <div class="sample-card">
+              <span class="sample-badge">Fictional sample</span>
+              <dl>
+                <div><dt>Assessment</dt><dd>Northwind collaboration review</dd></div>
+                <div><dt>Users in scope</dt><dd>250</dd></div>
+                <div><dt>Primary need</dt><dd>Collaboration ownership and governed knowledge</dd></div>
+              </dl>
+            </div>
+            <h4>Captured here</h4>
+            <ul class="check-list">
+              <li>Business goals and required outcomes</li>
+              <li>Environment, migration, partner and regional scope</li>
+              <li>Budget, delivery capacity and deadline constraints</li>
+            </ul>
+          </div>
+          <figure class="panel-image"><img src="assets/assess.png" alt="Guided project scope screen in M365 Compass"></figure>
+        </article>
+
+        <article class="demo-panel" data-panel="1" hidden>
+          <div class="panel-copy">
+            <p class="phase-label">Validate</p>
+            <h3>Can the recommendation be defended?</h3>
+            <p>Compass keeps missing prices, license uncertainty, unreviewed evidence, and readiness gaps visible instead of silently converting them into positive assumptions.</p>
+            <div class="readiness-card">
+              <div><span class="status complete">Complete</span><strong>Client goals and capability priorities</strong></div>
+              <div><span class="status review">Review</span><strong>Supplier pricing evidence</strong></div>
+              <div><span class="status review">Review</span><strong>Exact service-plan eligibility</strong></div>
+              <div><span class="status complete">Complete</span><strong>Scope-based effort assumptions</strong></div>
+            </div>
+            <h4>Validation includes</h4>
+            <ul class="check-list">
+              <li>License cohorts and affected-user quantities</li>
+              <li>Acceptance tests and evidence review dates</li>
+              <li>Commercial quotes, effort basis and dependencies</li>
+            </ul>
+          </div>
+          <figure class="panel-image"><img src="assets/validate.png" alt="Commercial estimate evidence fields in M365 Compass"></figure>
+        </article>
+
+        <article class="demo-panel" data-panel="2" hidden>
+          <div class="panel-copy">
+            <p class="phase-label">Recommend</p>
+            <h3>Explain the proposed plan and its trade-offs.</h3>
+            <p>The engine prioritizes hard limits and Must requirements, then evaluates broader coverage, cost, capability, and effort. It produces a recommendation—not an automatic compliance or licensing certification.</p>
+            <div class="metric-grid">
+              <div><span>Required outcomes</span><strong>1 / 1</strong></div>
+              <div><span>Monthly estimate</span><strong>$400</strong></div>
+              <div><span>Ongoing support</span><strong>4 h/mo</strong></div>
+            </div>
+            <div class="recommendation-card">
+              <span class="sample-badge">Candidate plan</span>
+              <h4>M365 collaboration foundation</h4>
+              <p>Reuse Teams and SharePoint patterns with explicit site ownership, access reviews, and lifecycle controls.</p>
+            </div>
+          </div>
+          <figure class="panel-image"><img src="assets/recommend.png" alt="M365 Compass recommendation dashboard"></figure>
+        </article>
+
+        <article class="demo-panel" data-panel="3" hidden>
+          <div class="panel-copy">
+            <p class="phase-label">Deliver</p>
+            <h3>Turn the reviewed decision into usable client material.</h3>
+            <p>Completion checks run before final exports. Frozen assessment snapshots produce short-lived, account-bound download links in the hosted architecture.</p>
+            <div class="deliverables">
+              <a href="assets/m365-compass-sample-brief.pdf" target="_blank" rel="noopener"><strong>Assessment brief</strong><span>Sample PDF</span></a>
+              <a href="assets/m365-compass-sample-quote.xlsx"><strong>Commercial workbook</strong><span>Sample Excel</span></a>
+              <div><strong>Statement of work</strong><span>Draft, review and change workflow</span></div>
+            </div>
+            <p class="note">Sample files contain fictional demonstration data and should not be interpreted as client advice or a vendor quote.</p>
+          </div>
+          <figure class="panel-image"><img src="assets/deliver.png" alt="M365 Compass export-ready download state"></figure>
+        </article>
+
+        <div class="demo-controls">
+          <button class="button secondary" id="back" disabled>Back</button>
+          <button class="button primary" id="next">Continue to Validate</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="architecture section-shell" id="architecture">
+      <div class="section-heading">
+        <p class="eyebrow">How it is built</p>
+        <h2>A small, explainable production architecture.</h2>
+      </div>
+      <div class="architecture-flow" role="img" aria-label="Browser interface connects to a Python application, which connects to deterministic planning logic, Supabase and Stripe, and generates documents on demand">
+        <div><span>Interface</span><strong>Vanilla HTML, CSS and JavaScript</strong></div>
+        <div><span>Application</span><strong>Python HTTP handler</strong></div>
+        <div><span>Decision layer</span><strong>Deterministic rules and planning engine</strong></div>
+        <div><span>Hosted services</span><strong>Supabase authentication and storage · Stripe billing</strong></div>
+        <div><span>Outputs</span><strong>PDF · Excel · JSON · Markdown · SOW</strong></div>
+      </div>
+      <p class="architecture-note">The public demonstration above is deliberately static. The complete source also contains a local SQLite simulator and a hosted Vercel/Supabase/Stripe path requiring deployment acceptance testing.</p>
+    </section>
+
+    <section class="evidence section-shell" id="evidence">
+      <div class="section-heading">
+        <p class="eyebrow">Validation</p>
+        <h2>What has—and has not—been demonstrated.</h2>
+      </div>
+      <div class="evidence-grid">
+        <article>
+          <h3>Validated locally</h3>
+          <ul class="check-list">
+            <li>196 automated tests discovered</li>
+            <li>Assessment and recommendation logic</li>
+            <li>History, templates, scenarios and practice tools</li>
+            <li>PDF and Excel generation with real file output</li>
+            <li>Payment, entitlement and ownership contract tests</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Requires hosted staging</h3>
+          <ul class="plain-list">
+            <li>Live GitHub OAuth and account recovery</li>
+            <li>Real Stripe Checkout, portal and webhook lifecycle</li>
+            <li>Supabase RLS, concurrency and operational backups</li>
+            <li>Production privacy, deletion and support procedures</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing section-shell">
+      <p class="eyebrow">Résumé-ready project framing</p>
+      <h2>Explainable decision support for Microsoft 365 consulting.</h2>
+      <p>Designed and implemented by Levon Costa as a portfolio demonstration of product thinking, deterministic recommendation logic, commercial modeling, evidence-led consulting workflows, and document automation.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#journey">Replay the guided demo</a>
+        <a class="button secondary" href="assets/m365-compass-sample-quote.xlsx">Download sample workbook</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>M365 Compass</strong>
+    <span>Independent portfolio project. Microsoft 365 is a trademark of Microsoft Corporation; this project is not affiliated with or endorsed by Microsoft.</span>
+  </footer>
+</body>
+</html>
