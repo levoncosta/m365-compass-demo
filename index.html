@@ -52,23 +52,24 @@
         <p>The full application contains advanced consulting tools. This demonstration presents its primary path first and reveals supporting detail only when it helps the decision.</p>
       </div>
 
-      <div class="demo-shell">
-        <ol class="stepper" aria-label="Demo progress">
-          <li><button class="step active" data-step="0"><span>1</span><strong>Assess</strong><small>Goals and scope</small></button></li>
-          <li><button class="step" data-step="1"><span>2</span><strong>Validate</strong><small>Evidence and costs</small></button></li>
-          <li><button class="step" data-step="2"><span>3</span><strong>Recommend</strong><small>Plan and trade-offs</small></button></li>
-          <li><button class="step" data-step="3"><span>4</span><strong>Deliver</strong><small>Client-ready output</small></button></li>
+      <nav class="journey-progress" aria-label="Demo progress">
+        <ol class="stepper">
+          <li><a class="step active" href="#phase-assess" data-step="0" aria-current="step"><span>1</span><strong>Assess</strong><small>Goals and scope</small></a></li>
+          <li><a class="step" href="#phase-validate" data-step="1"><span>2</span><strong>Validate</strong><small>Evidence and costs</small></a></li>
+          <li><a class="step" href="#phase-recommend" data-step="2"><span>3</span><strong>Recommend</strong><small>Plan and trade-offs</small></a></li>
+          <li><a class="step" href="#phase-deliver" data-step="3"><span>4</span><strong>Deliver</strong><small>Client-ready output</small></a></li>
         </ol>
-
         <div class="demo-status">
-          <span id="progress-label">Step 1 of 4</span>
+          <span id="progress-label" aria-live="polite">Step 1 of 4 · Assess</span>
           <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
-          <span id="completion-label">25% complete</span>
+          <span id="completion-label">25% through journey</span>
         </div>
+      </nav>
 
-        <article class="demo-panel active" data-panel="0">
+      <div class="demo-shell">
+        <article class="demo-panel active" id="phase-assess" data-panel="0">
           <div class="panel-copy">
-            <p class="phase-label">Assess</p>
+            <p class="phase-label">Step 1 of 4 · Assess</p>
             <h3>What does the client need?</h3>
             <p>Establish the opportunity, users, outcomes, constraints, and workstreams before presenting a solution.</p>
             <div class="sample-card">
@@ -89,9 +90,9 @@
           <figure class="panel-image"><img src="assets/assess.png" alt="Guided project scope screen in M365 Compass"></figure>
         </article>
 
-        <article class="demo-panel" data-panel="1" hidden>
+        <article class="demo-panel" id="phase-validate" data-panel="1">
           <div class="panel-copy">
-            <p class="phase-label">Validate</p>
+            <p class="phase-label">Step 2 of 4 · Validate</p>
             <h3>Can the recommendation be defended?</h3>
             <p>Compass keeps missing prices, license uncertainty, unreviewed evidence, and readiness gaps visible instead of silently converting them into positive assumptions.</p>
             <div class="readiness-card">
@@ -110,9 +111,9 @@
           <figure class="panel-image"><img src="assets/validate.png" alt="Commercial estimate evidence fields in M365 Compass"></figure>
         </article>
 
-        <article class="demo-panel" data-panel="2" hidden>
+        <article class="demo-panel" id="phase-recommend" data-panel="2">
           <div class="panel-copy">
-            <p class="phase-label">Recommend</p>
+            <p class="phase-label">Step 3 of 4 · Recommend</p>
             <h3>Explain the proposed plan and its trade-offs.</h3>
             <p>The engine prioritizes hard limits and Must requirements, then evaluates broader coverage, cost, capability, and effort. It produces a recommendation—not an automatic compliance or licensing certification.</p>
             <div class="metric-grid">
@@ -129,9 +130,9 @@
           <figure class="panel-image"><img src="assets/recommend.png" alt="M365 Compass recommendation dashboard"></figure>
         </article>
 
-        <article class="demo-panel" data-panel="3" hidden>
+        <article class="demo-panel" id="phase-deliver" data-panel="3">
           <div class="panel-copy">
-            <p class="phase-label">Deliver</p>
+            <p class="phase-label">Step 4 of 4 · Deliver</p>
             <h3>Turn the reviewed decision into usable client material.</h3>
             <p>Completion checks run before final exports. Frozen assessment snapshots produce short-lived, account-bound download links in the hosted architecture.</p>
             <div class="deliverables">
@@ -144,10 +145,6 @@
           <figure class="panel-image"><img src="assets/deliver.png" alt="M365 Compass export-ready download state"></figure>
         </article>
 
-        <div class="demo-controls">
-          <button class="button secondary" id="back" disabled>Back</button>
-          <button class="button primary" id="next">Continue to Validate</button>
-        </div>
       </div>
     </section>
 
