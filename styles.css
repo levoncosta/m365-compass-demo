@@ -28,8 +28,12 @@ img { display: block; max-width: 100%; }
   background: rgba(251, 253, 252, .94); border-bottom: 1px solid rgba(215, 227, 223, .85);
   backdrop-filter: blur(14px);
 }
-.brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; font-size: 1.2rem; }
-.brand-mark { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: .7rem; background: var(--green); color: white; font-size: 1.6rem; }
+.brand { display: inline-flex; align-items: center; text-decoration: none; }
+.brand-lockup { position: relative; display: block; width: 7.75rem; height: 2.75rem; overflow: hidden; }
+.brand-lockup img { position: absolute; top: -2.9rem; left: 0; width: 7.75rem; height: 7.75rem; max-width: none; }
+.brand-app-icon { display: none; width: 2.5rem; height: 2.5rem; overflow: hidden; border-radius: .65rem; }
+.brand-app-icon img { width: 100%; height: 100%; transform: scale(1.25); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .site-header nav { display: flex; gap: 1.5rem; }
 .site-header nav a { color: var(--muted); text-decoration: none; font-weight: 700; }
 .site-header nav a:hover, .site-header nav a:focus-visible { color: var(--green); }
@@ -51,7 +55,9 @@ h4 { margin: 1.4rem 0 .55rem; font-size: 1rem; }
 .button.secondary:hover, .button.secondary:focus-visible { border-color: var(--green); color: var(--green); }
 .button:disabled { opacity: .45; cursor: not-allowed; }
 .disclosure, .note { color: var(--muted); font-size: .91rem; }
-.hero-visual { margin: 0; border-radius: 1.4rem; overflow: hidden; box-shadow: var(--shadow); transform: rotate(.5deg); }
+.hero-visual { margin: 0; border-radius: 1.4rem; overflow: hidden; box-shadow: var(--shadow); }
+.product-showcase { padding: 1rem; border: 1px solid var(--line); background: white; }
+.showcase-screen { width: 100%; border: 1px solid var(--line); border-radius: .9rem; }
 
 .summary-strip { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); background: var(--ink); color: white; }
 .summary-strip div { padding: 1.5rem 2rem; border-right: 1px solid rgba(255,255,255,.15); }
@@ -150,6 +156,8 @@ footer span { max-width: 780px; text-align: right; }
 
 @media (max-width: 620px) {
   .site-header { min-height: 64px; }
+  .brand-lockup { display: none; }
+  .brand-app-icon { display: block; }
   h1 { font-size: 2.7rem; }
   .summary-strip { grid-template-columns: 1fr; }
   .summary-strip div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.15); }
@@ -176,4 +184,3 @@ footer span { max-width: 780px; text-align: right; }
   .demo-panel { transition: none; }
   .progress-track span { transition: none; }
 }
-

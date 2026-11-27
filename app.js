@@ -52,4 +52,3 @@ function scheduleScrollUpdate() {
 window.addEventListener('scroll', scheduleScrollUpdate, { passive: true });
 window.addEventListener('resize', scheduleScrollUpdate);
 updateFromScroll();
-

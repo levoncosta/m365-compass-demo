@@ -1,6 +1,6 @@
-# M365 Compass — Interactive Product Demo
+# Collate 365 — Interactive Product Demo
 
-A public, portfolio-safe demonstration of the M365 Compass workflow:
+A public demonstration of the Collate 365 workflow:
 
 1. Assess
 2. Validate

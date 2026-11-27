@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Interactive demonstration of M365 Compass, an explainable Microsoft 365 consulting decision-support application.">
-  <title>M365 Compass — Interactive product demonstration</title>
+  <meta name="description" content="Interactive demonstration of Collate 365, an explainable Microsoft 365 consulting decision-support application.">
+  <title>Collate 365 — Interactive product demonstration</title>
+  <link rel="icon" type="image/png" href="assets/collate365-flat-app-icon.png">
+  <link rel="apple-touch-icon" href="assets/collate365-flat-app-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="M365 Compass home">
-      <span class="brand-mark" aria-hidden="true">◇</span>
-      <span>M365 <strong>Compass</strong></span>
+    <a class="brand" href="#top" aria-label="Collate 365 home">
+      <span class="brand-lockup" aria-hidden="true"><img src="assets/collate365-flat-logo.png" alt=""></span>
+      <span class="brand-app-icon" aria-hidden="true"><img src="assets/collate365-flat-app-icon.png" alt=""></span>
+      <span class="sr-only">Collate 365</span>
     </a>
     <nav aria-label="Primary navigation">
       <a href="#journey">Guided demo</a>
@@ -26,15 +29,15 @@
       <div class="hero-copy">
       <p class="eyebrow">Microsoft 365 decision support · Interactive demonstration</p>
         <h1>From client uncertainty to a defensible Microsoft 365 plan.</h1>
-        <p class="lede">M365 Compass structures discovery, checks evidence and licensing assumptions, explains its recommendation, and generates client-ready deliverables.</p>
+        <p class="lede">Collate 365 structures discovery, checks evidence and licensing assumptions, explains its recommendation, and generates client-ready deliverables.</p>
         <div class="hero-actions">
           <a class="button primary" href="#journey">Start the guided demo</a>
-          <a class="button secondary" href="assets/m365-compass-sample-brief.pdf" target="_blank" rel="noopener">View sample PDF</a>
+          <a class="button secondary" href="assets/collate-365-sample-brief.pdf" target="_blank" rel="noopener">View sample PDF</a>
         </div>
         <p class="disclosure"><strong>Demo boundary:</strong> this public experience uses fictional sample data. It does not connect to a Microsoft tenant, authenticate users, or process payments.</p>
       </div>
-      <figure class="hero-visual">
-        <img src="assets/compass-showcase.jpg" alt="M365 Compass screens showing assessment, validation, recommendation, and deliverable generation">
+      <figure class="hero-visual product-showcase">
+        <img class="showcase-screen" src="assets/recommend.png" alt="Collate 365 recommendation dashboard showing cost, capability, and trade-offs">
       </figure>
     </section>
 
@@ -87,14 +90,14 @@
               <li>Budget, delivery capacity and deadline constraints</li>
             </ul>
           </div>
-          <figure class="panel-image"><img src="assets/assess.png" alt="Guided project scope screen in M365 Compass"></figure>
+          <figure class="panel-image"><img src="assets/assess.png" alt="Guided project scope screen in Collate 365"></figure>
         </article>
 
         <article class="demo-panel" id="phase-validate" data-panel="1">
           <div class="panel-copy">
             <p class="phase-label">Step 2 of 4 · Validate</p>
             <h3>Can the recommendation be defended?</h3>
-            <p>Compass keeps missing prices, license uncertainty, unreviewed evidence, and readiness gaps visible instead of silently converting them into positive assumptions.</p>
+            <p>Collate 365 keeps missing prices, license uncertainty, unreviewed evidence, and readiness gaps visible instead of silently converting them into positive assumptions.</p>
             <div class="readiness-card">
               <div><span class="status complete">Complete</span><strong>Client goals and capability priorities</strong></div>
               <div><span class="status review">Review</span><strong>Supplier pricing evidence</strong></div>
@@ -108,7 +111,7 @@
               <li>Commercial quotes, effort basis and dependencies</li>
             </ul>
           </div>
-          <figure class="panel-image"><img src="assets/validate.png" alt="Commercial estimate evidence fields in M365 Compass"></figure>
+          <figure class="panel-image"><img src="assets/validate.png" alt="Commercial estimate evidence fields in Collate 365"></figure>
         </article>
 
         <article class="demo-panel" id="phase-recommend" data-panel="2">
@@ -127,7 +130,7 @@
               <p>Reuse Teams and SharePoint patterns with explicit site ownership, access reviews, and lifecycle controls.</p>
             </div>
           </div>
-          <figure class="panel-image"><img src="assets/recommend.png" alt="M365 Compass recommendation dashboard"></figure>
+          <figure class="panel-image"><img src="assets/recommend.png" alt="Collate 365 recommendation dashboard"></figure>
         </article>
 
         <article class="demo-panel" id="phase-deliver" data-panel="3">
@@ -136,13 +139,13 @@
             <h3>Turn the reviewed decision into usable client material.</h3>
             <p>Completion checks run before final exports. Frozen assessment snapshots produce short-lived, account-bound download links in the hosted architecture.</p>
             <div class="deliverables">
-              <a href="assets/m365-compass-sample-brief.pdf" target="_blank" rel="noopener"><strong>Assessment brief</strong><span>Sample PDF</span></a>
-              <a href="assets/m365-compass-sample-quote.xlsx"><strong>Commercial workbook</strong><span>Sample Excel</span></a>
+              <a href="assets/collate-365-sample-brief.pdf" target="_blank" rel="noopener"><strong>Assessment brief</strong><span>Sample PDF</span></a>
+              <a href="assets/collate-365-sample-quote.xlsx"><strong>Commercial workbook</strong><span>Sample Excel</span></a>
               <div><strong>Statement of work</strong><span>Draft, review and change workflow</span></div>
             </div>
             <p class="note">Sample files contain fictional demonstration data and should not be interpreted as client advice or a vendor quote.</p>
           </div>
-          <figure class="panel-image"><img src="assets/deliver.png" alt="M365 Compass export-ready download state"></figure>
+          <figure class="panel-image"><img src="assets/deliver.png" alt="Collate 365 export-ready download state"></figure>
         </article>
 
       </div>
@@ -197,15 +200,14 @@
       <p>Download the sample workbook to inspect service estimates, licensing assumptions, and evidence notes, or replay the guided workflow from Assess.</p>
       <div class="hero-actions">
         <a class="button primary" href="#journey">Start again</a>
-        <a class="button secondary" href="assets/m365-compass-sample-quote.xlsx">Download sample workbook</a>
+        <a class="button secondary" href="assets/collate-365-sample-quote.xlsx">Download sample workbook</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <strong>M365 Compass</strong>
+    <strong>Collate 365</strong>
     <span>Independent demonstration. Microsoft 365 is a trademark of Microsoft Corporation; this project is not affiliated with or endorsed by Microsoft.</span>
   </footer>
 </body>
 </html>
-
